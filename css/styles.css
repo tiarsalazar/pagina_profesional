@@ -1,0 +1,45 @@
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
+    background-color: #E9D8C4;
+    height: 100px;
+}
+
+header a {
+    text-decoration-line: none;
+}
+
+header h1 {
+    color: #05060E;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.bloque {
+    background-color: #C9B79C;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 16px;
+}
+
+.portafolio {
+    max-width: 1000px;
+    display: flex;
+    margin: 16px;
+}
+
+.presentation {
+    max-width: 1000px;
+    margin: 16px;
+    display: flex;
+}
+
+.presentation img {
+    max-width: 250px;
+}
+
+#img_presentacion {
+    background-color: white;
+}
