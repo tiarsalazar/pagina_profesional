@@ -17,6 +17,14 @@ header h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+header img {
+    max-width: 20px;
+}
+
+.about_me {
+    max-width: 360px;
+}
+
 .bloque {
     background-color: #C9B79C;
     border-radius: 16px;
@@ -28,37 +36,32 @@ header h1 {
     text-align: center;
 }
 
-.carousel {
-    display: flex;
-    overflow-x: auto;
-    gap: 15px;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 15px;
-}
-
-.project {
-    min-width: 250px;
-    background-color: #FF6B6B;
-    border-radius: 10px;
-    box-shadow: 0 0 16px #05060E;
-    scroll-snap-align: start;
-    padding: 15px;
-}
-
-.project img {
-    max-width: 360px;
-}
-
 .presentation {
+    background-color: rgba(167, 224, 219, 0.5);
+    border-radius: 16px;
     max-width: 1800px;
     display: flex;
+    padding: 20px;
     margin: 16px;
 }
 
 .presentation img {
-    max-width: 360px;
+    max-width: 120px;
+    margin: 0 20px 0 0;
+}
+
+.right {
+    padding: 30px;
+}
+
+#carouselExampleDark {
+    max-width: 100%;
 }
 
 #img_presentacion {
     background-color: white;
+}
+
+#main {
+    display: flex;
 }

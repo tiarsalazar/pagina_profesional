@@ -11,50 +11,81 @@
 <body>
     <header>
         <h1>Tiare Salazar</h1>
-        <a href="https://github.com/tiare-wq">GitHub</a>
+        <div>
+            <img src="img/gitHub.png" alt="GitHub">
+            <a href="https://github.com/tiare-wq">GitHub</a>
+        </div>
     </header>
     <main>
-        <div class="presentation">
-            <div class="bloque" id="img_presentacion">
-                <img src="img/ciberPunk.jpg" alt="Ciber punk">
+        <div id="main">
+            <div class="right">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="img/Pinterest.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Página web desarrollada en Java y JavaScript desarrollada en mi último año de carrera. Simula la aplicación de 
+                            <b>Pinterest</b> para la versión página web. Se utiliza una base de datos escritas en PostgreSQL y alojada en Superbass.</p>
+                        </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                        <img src="img/ML.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Algoritmo de IA implementado a una aplicación que recomienda locales de comida. Utiliza librerías como Scikit Learn y 
+                            PyPlot para entrenar el modelo y testearlo.</p>
+                        </div>
+                        </div>
+                        <div class="carousel-item">
+                        <img src="img/minijuego.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Minijuego realizado en Python, utiliza la librería Tkinter para diseñar e implementar las animaciones y diseño. 
+                            Es un juego de estrategia que te da pistas para adivinar un número secreto. Basado en el primer proyecto de la carrera.
+                        </p>
+                        </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="presentation">
+                    <img src="img/fotoPresentacion.jpeg" alt="Foto de Presentación">
+                    <div>
+                        <h4>Presentación y Sobre mí</h4>
+                        <p>Me llamo Tiare Salazar y me especializaré en devOps. Me inicié en Ingeniería en Informática el 2025 en Duoc UC. He realizado 
+                        cursos en Python e IA y mi sueño es ser una devOps senior que trabaje en una organización del gobierno como la Educación. 
+                        Me interesa ser una profesional que permita que la tecnología en general esté a disposición de los alumnos, alumnas y 
+                        docentes. Lo que más me interesa de mi trabajo es el proceso que lleva a la excelencia.</p>
+                    </div>
+                </div>
             </div>
-            <div class="bloque">
-                <h2>Habilidades</h2>
-                <li>
-                    <ul>Spring Boot, pruebas unitarias (Mockito, JUnit)</ul>
-                    <ul>Oracle Cloud</ul>
-                    <ul>Git/GitHub</ul>
-                    <ul>AWS</ul>
-                    <ul>Python, librerías como Scikit Learn, NumPy, Pandas, PyPlot</ul>
-                </li>
-            </div>
-        </div>
-        <div class="carousel">
-            <div class="project">
-                <img src="img/Pinterest.png">
-                <p>Página web desarrollada en Java y JavaScript desarrollada en mi último año de carrera. Simula la aplicación de 
-                <b>Pinterest</b> para la versión página web. Se utiliza una base de datos escritas en PostgreSQL y alojada en Superbass.</p>
-            </div>
-            <div class="project">
-                <img src="img/ML.png">
-                <p>Algoritmo de IA implementado a una aplicación que recomienda locales de comida. Utiliza librerías como Scikit Learn y 
-                    PyPlot para entrenar el modelo y testearlo.</p>
-            </div>
-            <div class="project">
-                <img src="img/minijuego.png">
-                <p>Minijuego realizado en Python, utiliza la librería Tkinter para diseñar e implementar las animaciones y diseño. 
-                Es un juego de estrategia que te da pistas para adivinar un número secreto. Basado en el primer proyecto de la carrera.
-                </p>
-            </div>
-        </div>
-        <div class="presentation">
-            <img src="img/fotoPresentacion.jpeg" alt="Foto de Presentación">
-            <div>
-                <h4>Presentación y Sobre mí</h4>
-                <p>Me llamo Tiare Salazar y me especializaré en devOps. Me inicié en Ingeniería en Informática el 2025 en Duoc UC. He realizado 
-                cursos en Python e IA y mi sueño es ser una devOps senior que trabaje en una organización del gobierno como la Educación. 
-                Me interesa ser una profesional que permita que la tecnología en general esté a disposición de los alumnos, alumnas y 
-                docentes. Lo que más me interesa de mi trabajo es el proceso que lleva a la excelencia.</p>
+            <div class="about_me">
+                <!-- <div class="bloque" id="img_presentacion">
+                    <img src="img/ciberPunk.jpg" alt="Ciber punk">
+                </div> -->
+                <div class="bloque">
+                    <h2>Habilidades</h2>
+                    <li>
+                        <ul>Spring Boot, pruebas unitarias (Mockito, JUnit)</ul>
+                        <ul>Oracle Cloud</ul>
+                        <ul>Git/GitHub</ul>
+                        <ul>AWS</ul>
+                        <ul>Python, librerías como Scikit Learn, NumPy, Pandas, PyPlot</ul>
+                    </li>
+                </div>
             </div>
         </div>
         <div class="contacto">
