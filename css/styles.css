@@ -4,12 +4,12 @@ body {
 }
 
 header {
-    background-color: #E9D8C4;
+    background-color: #FF6B6B;
     height: 100px;
 }
 
 header a {
-    text-decoration-line: none;
+    text-decoration: none;
 }
 
 header h1 {
@@ -24,20 +24,39 @@ header h1 {
     margin: 16px;
 }
 
-.portafolio {
-    max-width: 1000px;
+.contacto {
+    text-align: center;
+}
+
+.carousel {
     display: flex;
-    margin: 16px;
+    overflow-x: auto;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 15px;
+}
+
+.project {
+    min-width: 250px;
+    background-color: #FF6B6B;
+    border-radius: 10px;
+    box-shadow: 0 0 16px #05060E;
+    scroll-snap-align: start;
+    padding: 15px;
+}
+
+.project img {
+    max-width: 360px;
 }
 
 .presentation {
-    max-width: 1000px;
-    margin: 16px;
+    max-width: 1800px;
     display: flex;
+    margin: 16px;
 }
 
 .presentation img {
-    max-width: 250px;
+    max-width: 360px;
 }
 
 #img_presentacion {
