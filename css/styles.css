@@ -69,6 +69,7 @@ nav img {
 }
 
 .carousel-caption.d-none.d-md-block {
+    /* Cambios responsivos */
     transform: scale(0.8);
     transform-origin: center;
     background-color: rgba(255, 255, 255, 0.8);
@@ -80,7 +81,17 @@ nav img {
     font-size: 20px;
 }
 
-.habilidades {
+.container {
+    width: 35%;       /* Ocupa el espacio restante del lado derecho */
+    max-width: 400px;
+    flex-shrink: 0;   /* Protege su tamaño para que no se superpongan sus elementos */
+}
+
+.container-md {
+    width: 65%;
+}
+
+.certificaciones {
     min-width: 280px;
     background-color: #FF5A5F;
     border-radius: 16px;
@@ -88,20 +99,28 @@ nav img {
     margin: 16px;
 }
 
-.habilidades:hover {
+.certificaciones:hover {
     border: 2px solid #12163A;
 }
 
-.left {
-    max-width: 320px;
+.habilidades {
+    background-color: white;
+    min-width: 260px;
+    padding: 20px;
+    margin: 25px;
+}
+
+.habilidades:hover {
+    border: 2px solid #12163A;
 }
 
 .presentation {
     background-color: rgba(167, 224, 219, 0.5);
     border-radius: 16px;
     max-width: 1050px;
-    min-width: 600px;
-    width: 100%;
+    min-width: 360px;
+    width: 100%;       /* Ocupa la mayor parte de la pantalla */
+    flex-shrink: 0;   /* Evita que se encoja menos de 600px */
     display: flex;
     align-items: center;
     padding: 20px;
@@ -126,7 +145,16 @@ nav img {
 }
 
 #contacto {
+    background-color: white;
     text-align: center;
+    width: 100svw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-top: 50px;
+    margin-bottom: 0;
+    margin-left: -50svw;
+    margin-right: -50svw;
 }
 
 #img_presentacion {
@@ -135,4 +163,123 @@ nav img {
 
 #principal {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;            /* Fuerza a mantener la misma línea */
+    justify-content: space-between; /* Uno a la izquierda y otro a la derecha */
+    width: 100%;
+    gap: 20px; 
+}
+
+@media only screen and (max-width: 900px) {
+    #principal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carousel-caption.d-none.d-md-block {
+        margin: 30px;
+    }
+
+    .certificaciones {
+        margin: 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 400px;
+        flex-shrink: 1;
+        padding: 0%;
+        margin: 0;
+        order: -1;
+    }
+
+    .container-md {
+        width: 100svw;
+        padding: 0;
+        margin: 0;
+    }
+
+    .habilidades {
+        margin: 10px;
+    }
+
+    .presentation {
+        margin: 30px;
+    }
+
+    main {
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* 1. Forzar a que NADA pueda medir más que la pantalla del celular */
+    html, body {
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden; /* Corta de raíz cualquier desborde derecho */
+    }
+
+    /* 2. Reducir la altura del header para pantallas chicas */
+    header {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    header h1 {
+        font-size: 32px; /* Un poco más pequeño para asegurar que no empuje el borde */
+        padding: 10px;
+    }
+
+    footer {
+        margin: 0;
+        padding: 4px;
+    }
+
+    main {
+        margin: 0;
+        padding: 4px;
+        width: 100%; /* Asegura que el contenedor principal respete el ancho */
+    }
+
+    /* 3. Resetear los min-width para que se adapten al 100% del espacio disponible */
+    .presentation {
+        margin: 10px 4px;
+        flex-direction: column; 
+        text-align: center;
+        min-width: 120px !important;
+        width: auto;
+    }
+
+    .presentation img {
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+
+    .certificaciones {
+        margin: 10px 4px;
+        min-width: 0 !important; /* Rompe el min-width de 280px */
+        width: auto;
+    }
+
+    .habilidades {
+        margin: 10px 4px;
+        min-width: 0 !important; /* Rompe el min-width de 260px */
+        width: auto;
+    }
+
+    .container {
+        flex-direction: column; 
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* 4. Evitar que el carrusel rompa el ancho */
+    #carouselExampleDark, .carousel-inner, .carousel-item {
+        max-width: 100%;
+        overflow: hidden;
+    }
 }
