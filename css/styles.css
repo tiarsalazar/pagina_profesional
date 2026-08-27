@@ -88,7 +88,7 @@ nav img {
 }
 
 .container img {
-    max-width: 350px;
+    max-width: 400px;
 }
 
 .container-md {
@@ -279,6 +279,10 @@ nav img {
         flex-direction: column; 
         width: 100%;
         max-width: 100%;
+    }
+
+    .container img {
+        max-width: 250px;
     }
 
     /* 4. Evitar que el carrusel rompa el ancho */
