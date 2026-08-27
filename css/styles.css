@@ -87,6 +87,10 @@ nav img {
     flex-shrink: 0;   /* Protege su tamaño para que no se superpongan sus elementos */
 }
 
+.container img {
+    max-width: 350px;
+}
+
 .container-md {
     width: 65%;
 }
