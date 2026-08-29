@@ -34,6 +34,10 @@ header h1 {
     padding: 30px;
 }
 
+header h2 {
+    font-size: 55px;
+}
+
 header p {
     color: #05060E;
     font-size: 16px;
@@ -105,6 +109,11 @@ nav img {
 
 .certificaciones:hover {
     border: 2px solid #12163A;
+}
+
+.encabezados {
+    display: flex;
+    flex-direction: column;
 }
 
 .habilidades {
